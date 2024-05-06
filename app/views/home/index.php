@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Home</title>
-</head>
-
-<body>
-    <h1>Selamat Datang di website saya</h1>
-</body>
-
-</html>
+<div class="container">
+    <div class="mt-4 p-5 bg-primary text-white rounded">
+        <h1>Selamat Datang Di website saya</h1>
+        <p>Lorem ipsum...</p>
+    </div>
+</div>
