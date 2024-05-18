@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-lg-6">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">
+            <button type="button" class="btn btn-primary tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
             <br><br>
@@ -16,6 +16,7 @@
                     <li class="list-group-item">
                         <?= $mhs['nama'] ?>
                         <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id'] ?>" class="badge bg-danger float-end ms-2" onclick="return confirm('yakin?');">Hapus</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/edit/<?= $mhs['id'] ?>" class="badge bg-warning float-end ms-2 text-black tampilModalEdit" data-bs-toggle="modal" data-bs-target="#formModal" data-id=<?= $mhs['id'] ?>>Edit</a>
                         <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge bg-success float-end ms-2 ">Detail</a>
                     </li>
                 <?php endforeach; ?>
@@ -34,6 +35,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+                    <input type="hidden" name="id" id="id">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama">
